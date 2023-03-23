@@ -62,7 +62,7 @@ class QuizApp:
                     self.qm.take_quiz(quiznum,self.username)
                     self.qm.print_results()
                     dosave=input("Save the results? (y/n):")
-                    dosave=dosave.capitalize()
+                    #dosave=dosave.capitalize()
                     if len(dosave)>0 and dosave[0]=='Y':
                         self.qm.save_results()
                 except:
