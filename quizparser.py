@@ -14,6 +14,7 @@ class QuizParserState(Enum):
 
 
 class QuizParser(xml.sax.ContentHandler):
+
     def __init__(self):
         self.new_quiz = Quiz()
         self.parse_state = QuizParserState.IDLE
@@ -73,6 +74,5 @@ class QuizParser(xml.sax.ContentHandler):
             self._current_answer.text += chars
 
 
-if __name__ == "__main__":
-    app = QuizParser()
+
     
